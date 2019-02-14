@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>PowerShell设置代理链接</title>
-      <link href="/2019/02/13/PowerShell%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E9%93%BE%E6%8E%A5/"/>
-      <url>/2019/02/13/PowerShell%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E9%93%BE%E6%8E%A5/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><a id="more"></a><p><img src="https://i.loli.net/2019/02/13/5c63c615cca99.png" alt="PowerShell.png"></p><h1 id="Windows-PowerShell代理链接"><a href="#Windows-PowerShell代理链接" class="headerlink" title="Windows PowerShell代理链接"></a>Windows PowerShell代理链接</h1><p>这是一段从Microsoft官方下载的脚本,慎重使用<code></code></p><pre><code>&lt;#.SynopsisThis function will set the proxy settings provided as input to the cmdlet..DescriptionThis function will set the proxy server and (optinal) Automatic configuration script..Parameter ProxyServerThis parameter is set as the proxy for the system.Data from. This parameter is Mandatory.ExampleSetting proxy informationSet-InternetProxy -proxy &quot;proxy:7890&quot;.ExampleSetting proxy information and (optinal) Automatic Configuration Script Set-InternetProxy -proxy &quot;proxy:7890&quot; -acs &quot;http://proxy:7892&quot;#&gt;Function Set-InternetProxy{    [CmdletBinding()]    Param    (        [Parameter(Mandatory=$True,ValueFromPipeline=$true,ValueFromPipelineByPropertyName=$true)]        [String[]]$Proxy,        [Parameter(Mandatory=$False,ValueFromPipeline=$true,ValueFromPipelineByPropertyName=$true)]        [AllowEmptyString()]        [String[]]$acs                    )    Begin    {            $regKey=&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings&quot;            }    Process    {                Set-ItemProperty -path $regKey ProxyEnable -value 1        Set-ItemProperty -path $regKey ProxyServer -value $proxy                                    if($acs)         {                                         Set-ItemProperty -path $regKey AutoConfigURL -Value $acs           }    }     End    {        Write-Output &quot;Proxy is now enabled&quot;        Write-Output &quot;Proxy Server : $proxy&quot;        if ($acs)        {                        Write-Output &quot;Automatic Configuration Script : $acs&quot;        }        else        {                        Write-Output &quot;Automatic Configuration Script : Not Defined&quot;        }    }}</code></pre><p>将上面的代码复制下来并保存为<strong>Set-InternetProxy.ps1</strong>即可。</p>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[Web Job]]></title>
+    <url>%2F2019%2F02%2F14%2FWeb-Job%2F</url>
+    <content type="text"><![CDATA[寻求一份Web前端开发相关的工作 联系方式 手机：17633098626 Email：demon.zwh@gmail.com QQ:553740271 个人信息 张伟豪/男/1999 技术博客：http://zerodevi1.net Github：http://github.com/zerodevi1 期望职位：Web前端 期望城市：石家庄 技能清单 熟练使用HTML5,CSS3,jQuery 熟练使用HBuilder,Webstrom,Dreamweaver等IDE 了解Photoshop的使用 对于MySQL略有涉猎 致谢感谢您花时间阅读我的简历，期待能有机会和您共事。]]></content>
       <categories>
-          
-          <category> SS/SSR </category>
-          
+        <category>Resume</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-  
-  
+  </entry>
+  <entry>
+    <title><![CDATA[小米6食用sGSI的正确姿势]]></title>
+    <url>%2F2019%2F02%2F14%2F%E5%B0%8F%E7%B1%B36%E9%A3%9F%E7%94%A8sGSI%E7%9A%84%E6%AD%A3%E7%A1%AE%E5%A7%BF%E5%8A%BF%2F</url>
+    <content type="text"><![CDATA[sGSI使用教程 Project Treble 参考步骤:(开始之前备份数据 数据无价) Wipe Data,Cache,System,Vender 刷入支持PT的底包,特别注意Android P需要用Android P做底包,Android O需要Android 8.1做底包 Wipe Data,System Backup恢复包 一般情况下只需要恢复System,除非与你的机型一致 直刷包 直接卡刷 挂载Vender,System分区,卡刷Patch补丁 删除 Vender-etc-permissions下的qcrilhook.xml qti_permissions.xml Vender-framework下的qcrilhook.jar Reboot]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[PowerShell设置代理链接]]></title>
+    <url>%2F2019%2F02%2F13%2FPowerShell%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E9%93%BE%E6%8E%A5%2F</url>
+    <content type="text"><![CDATA[Windows PowerShell代理链接这是一段从Microsoft官方下载的脚本,慎重使用 &lt;# .Synopsis This function will set the proxy settings provided as input to the cmdlet. .Description This function will set the proxy server and (optinal) Automatic configuration script. .Parameter ProxyServer This parameter is set as the proxy for the system. Data from. This parameter is Mandatory .Example Setting proxy information Set-InternetProxy -proxy &quot;proxy:7890&quot; .Example Setting proxy information and (optinal) Automatic Configuration Script Set-InternetProxy -proxy &quot;proxy:7890&quot; -acs &quot;http://proxy:7892&quot; #&gt; Function Set-InternetProxy { [CmdletBinding()] Param ( [Parameter(Mandatory=$True,ValueFromPipeline=$true,ValueFromPipelineByPropertyName=$true)] [String[]]$Proxy, [Parameter(Mandatory=$False,ValueFromPipeline=$true,ValueFromPipelineByPropertyName=$true)] [AllowEmptyString()] [String[]]$acs ) Begin { $regKey=&quot;HKCU:\Software\Microsoft\Windows\CurrentVersion\Internet Settings&quot; } Process { Set-ItemProperty -path $regKey ProxyEnable -value 1 Set-ItemProperty -path $regKey ProxyServer -value $proxy if($acs) { Set-ItemProperty -path $regKey AutoConfigURL -Value $acs } } End { Write-Output &quot;Proxy is now enabled&quot; Write-Output &quot;Proxy Server : $proxy&quot; if ($acs) { Write-Output &quot;Automatic Configuration Script : $acs&quot; } else { Write-Output &quot;Automatic Configuration Script : Not Defined&quot; } } } 将上面的代码复制下来并保存为Set-InternetProxy.ps1即可。]]></content>
+      <categories>
+        <category>SS/SSR</category>
+      </categories>
+  </entry>
 </search>
