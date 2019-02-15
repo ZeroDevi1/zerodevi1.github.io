@@ -325,7 +325,7 @@
       <div class="post-body">
         
         
-          <p><div id="top"></div></p>
+          <p></p><div id="top"></div><p></p>
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script>AV.initialize("app_id", "app_key");</script>
 <script type="text/javascript">
@@ -350,7 +350,25 @@
   });
 </script>
 
-<style>.post-description { display: none; }</style>
+<style>.post-description { display: none; }</style><script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
         
       </div>
       
@@ -464,6 +482,7 @@
 
       
 
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=2592497975&auto=1&height=430"></iframe>
     </div>
   </aside>
 

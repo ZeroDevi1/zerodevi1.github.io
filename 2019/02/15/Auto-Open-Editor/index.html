@@ -391,7 +391,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  200
+                  254
                 </span>
               
 
@@ -424,45 +424,63 @@
 
 <p><img src="https://" alt="" style="width:100%"></p>
 <a id="more"></a>
-<h2 id="Hexo添加文章之后寻找文件过于繁琐"><a href="#Hexo添加文章之后寻找文件过于繁琐" class="headerlink" title="Hexo添加文章之后寻找文件过于繁琐?"></a>Hexo添加文章之后寻找文件过于繁琐?</h2><hr>
+<h2 id="Hexo&#x6DFB;&#x52A0;&#x6587;&#x7AE0;&#x4E4B;&#x540E;&#x5BFB;&#x627E;&#x6587;&#x4EF6;&#x8FC7;&#x4E8E;&#x7E41;&#x7410;"><a href="#Hexo&#x6DFB;&#x52A0;&#x6587;&#x7AE0;&#x4E4B;&#x540E;&#x5BFB;&#x627E;&#x6587;&#x4EF6;&#x8FC7;&#x4E8E;&#x7E41;&#x7410;" class="headerlink" title="Hexo&#x6DFB;&#x52A0;&#x6587;&#x7AE0;&#x4E4B;&#x540E;&#x5BFB;&#x627E;&#x6587;&#x4EF6;&#x8FC7;&#x4E8E;&#x7E41;&#x7410;?"></a>Hexo&#x6DFB;&#x52A0;&#x6587;&#x7AE0;&#x4E4B;&#x540E;&#x5BFB;&#x627E;&#x6587;&#x4EF6;&#x8FC7;&#x4E8E;&#x7E41;&#x7410;?</h2><hr>
 
 <ul>
-<li>在你的Hexo目录下新建<mark>scripts</mark>文件夹  </li>
-<li>在<mark>scripts</mark>下新建任意名称的JavaScript脚本</li>
+<li>&#x5728;&#x4F60;&#x7684;Hexo&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;<mark>scripts</mark>&#x6587;&#x4EF6;&#x5939;  </li>
+<li>&#x5728;<mark>scripts</mark>&#x4E0B;&#x65B0;&#x5EFA;&#x4EFB;&#x610F;&#x540D;&#x79F0;&#x7684;JavaScript&#x811A;&#x672C;</li>
 <li><ol>
-<li><p><font color="red">Windows用户</font></p>
-<pre><code>var spawn = require(&#39;child_process&#39;).exec;
+<li><p><font color="red">Windows&#x7528;&#x6237;</font></p>
+<pre><code>var spawn = require(&apos;child_process&apos;).exec;
 
-// Hexo 2.x 用户复制这段
-hexo.on(&#39;new&#39;, function(path){
-spawn(&#39;start  &quot;markdown编辑器绝对路径.exe&quot; &#39; + path);
+// Hexo 2.x &#x7528;&#x6237;&#x590D;&#x5236;&#x8FD9;&#x6BB5;
+hexo.on(&apos;new&apos;, function(path){
+spawn(&apos;start  &quot;markdown&#x7F16;&#x8F91;&#x5668;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;.exe&quot; &apos; + path);
 });
 
-// Hexo 3 用户复制这段
-hexo.on(&#39;new&#39;, function(data){
-spawn(&#39;start  &quot;markdown编辑器绝对路径.exe&quot; &#39; + data.path);
+// Hexo 3 &#x7528;&#x6237;&#x590D;&#x5236;&#x8FD9;&#x6BB5;
+hexo.on(&apos;new&apos;, function(data){
+spawn(&apos;start  &quot;markdown&#x7F16;&#x8F91;&#x5668;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;.exe&quot; &apos; + data.path);
 });
 </code></pre><ol start="2">
-<li><p><font color="red">Mac用户</font></p>
-<pre><code>var exec = require(&#39;child_process&#39;).exec;
+<li><p><font color="red">Mac&#x7528;&#x6237;</font></p>
+<pre><code>var exec = require(&apos;child_process&apos;).exec;
 
-// Hexo 2.x 用户复制这段
-hexo.on(&#39;new&#39;, function(path){
-exec(&#39;open -a &quot;markdown编辑器绝对路径.app&quot; &#39; + path);
+// Hexo 2.x &#x7528;&#x6237;&#x590D;&#x5236;&#x8FD9;&#x6BB5;
+hexo.on(&apos;new&apos;, function(path){
+exec(&apos;open -a &quot;markdown&#x7F16;&#x8F91;&#x5668;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;.app&quot; &apos; + path);
 });
-// Hexo 3 用户复制这段
-hexo.on(&#39;new&#39;, function(data){
-exec(&#39;open -a &quot;markdown编辑器绝对路径.app&quot; &#39; + data.path);
+// Hexo 3 &#x7528;&#x6237;&#x590D;&#x5236;&#x8FD9;&#x6BB5;
+hexo.on(&apos;new&apos;, function(data){
+exec(&apos;open -a &quot;markdown&#x7F16;&#x8F91;&#x5668;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;.app&quot; &apos; + data.path);
 });
 </code></pre></li>
 </ol>
 </li>
 </ol>
 </li>
-<li>命令行键入 <code>hexo new &quot;name&quot;</code> </li>
+<li>&#x547D;&#x4EE4;&#x884C;&#x952E;&#x5165; <code>hexo new &quot;name&quot;</code> </li>
 <li>OJBK!   </li>
 </ul>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
       
     </div>
     
@@ -664,6 +682,7 @@ exec(&#39;open -a &quot;markdown编辑器绝对路径.app&quot; &#39; + data.pat
 
       
 
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=2592497975&auto=1&height=430"></iframe>
     </div>
   </aside>
 

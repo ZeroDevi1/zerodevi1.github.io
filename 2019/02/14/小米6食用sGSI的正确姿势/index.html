@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  119
+                  175
                 </span>
               
 
@@ -417,28 +417,46 @@
 
 <p><img src="https://" alt="" style="width:100%"></p>
 <a id="more"></a>
-<p>sGSI使用教程</p>
+<p>sGSI&#x4F7F;&#x7528;&#x6559;&#x7A0B;</p>
 <hr>
 
 
 <blockquote>
-<p><a href="https://source.android.com/devices/architecture" title="关于Project Treble的介绍" target="_blank" rel="noopener">Project Treble</a></p>
+<p><a href="https://source.android.com/devices/architecture" title="&#x5173;&#x4E8E;Project Treble&#x7684;&#x4ECB;&#x7ECD;" target="_blank" rel="noopener">Project Treble</a></p>
 </blockquote>
-<p><strong>参考步骤:</strong><br>(开始之前备份数据  数据无价)</p>
+<p><strong>&#x53C2;&#x8003;&#x6B65;&#x9AA4;:</strong><br>(&#x5F00;&#x59CB;&#x4E4B;&#x524D;&#x5907;&#x4EFD;&#x6570;&#x636E;  &#x6570;&#x636E;&#x65E0;&#x4EF7;)</p>
 <ol>
 <li>Wipe Data,Cache,System,Vender</li>
-<li>刷入支持PT的底包,特别注意Android P需要用Android P做底包,Android O需要Android 8.1做底包</li>
+<li>&#x5237;&#x5165;&#x652F;&#x6301;PT&#x7684;&#x5E95;&#x5305;,&#x7279;&#x522B;&#x6CE8;&#x610F;Android P&#x9700;&#x8981;&#x7528;Android P&#x505A;&#x5E95;&#x5305;,Android O&#x9700;&#x8981;Android 8.1&#x505A;&#x5E95;&#x5305;</li>
 <li>Wipe Data,System</li>
 <li><ol>
-<li>Backup恢复包 一般情况下只需要恢复System,除非与你的机型一致 </li>
-<li>直刷包 直接卡刷 </li>
+<li>Backup&#x6062;&#x590D;&#x5305; &#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#x53EA;&#x9700;&#x8981;&#x6062;&#x590D;System,&#x9664;&#x975E;&#x4E0E;&#x4F60;&#x7684;&#x673A;&#x578B;&#x4E00;&#x81F4; </li>
+<li>&#x76F4;&#x5237;&#x5305; &#x76F4;&#x63A5;&#x5361;&#x5237; </li>
 </ol>
 </li>
-<li>挂载Vender,System分区,卡刷Patch补丁</li>
-<li>删除 Vender-etc-permissions下的<strong>qcrilhook.xml</strong> <strong>qti_permissions.xml</strong> Vender-framework下的<strong>qcrilhook.jar</strong></li>
+<li>&#x6302;&#x8F7D;Vender,System&#x5206;&#x533A;,&#x5361;&#x5237;Patch&#x8865;&#x4E01;</li>
+<li>&#x5220;&#x9664; Vender-etc-permissions&#x4E0B;&#x7684;<strong>qcrilhook.xml</strong> <strong>qti_permissions.xml</strong> Vender-framework&#x4E0B;&#x7684;<strong>qcrilhook.jar</strong></li>
 <li>Reboot</li>
 </ol>
-
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
       
     </div>
     
@@ -619,6 +637,7 @@
 
       
 
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="//music.163.com/outchain/player?type=0&id=2592497975&auto=1&height=430"></iframe>
     </div>
   </aside>
 
